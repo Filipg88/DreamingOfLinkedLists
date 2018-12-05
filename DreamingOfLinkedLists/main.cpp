@@ -9,7 +9,7 @@ int main()
 
 	cout << "Dreaming of linked lists <3" << endl;
 
-	cout << "changes" << endl;
+	cout << "changes /jenny" << endl;
 
 	cin.get();
 
