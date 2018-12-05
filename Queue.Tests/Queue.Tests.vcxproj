@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3baba003-b105-4052-ac93-29c06e7f8a10}</ProjectGuid>
+    <ProjectGuid>{b133513e-d645-4161-9299-8570b3038927}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <ConfigurationType>Application</ConfigurationType>
@@ -33,7 +33,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
-    <ClInclude Include="..\DreamingOfLinkedLists\linkedlist.h" />
+    <ClInclude Include="..\DreamingOfLinkedLists\Queue.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>

@@ -1,18 +1,25 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include <vector>
 
-template <class T>
+
+//template <class T>
 class Queue
 {
 public:
-	Queue();
+	struct Node
 	{
-
-	}
-	~Queue();
+		int data;
+		Node *next;
+	};
+	Queue();
+	bool isEmpty();
+	void addToQueue(int data);
+	void removeFromQueue();
+	int GetData();
 private:
-
+	Node *front;
+	Node *rear;
+	int count;
 };
 
