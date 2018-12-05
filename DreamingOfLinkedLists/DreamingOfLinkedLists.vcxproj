@@ -116,10 +116,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DoubleLinkedList.cpp" />
+    <ClCompile Include="linkedlist.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stack.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="linkedlist.h" />
     <ClInclude Include="stack.h" />
   </ItemGroup>
   <ItemGroup>
