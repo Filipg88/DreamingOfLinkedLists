@@ -2,7 +2,7 @@
 class DoubleLinkedList
 {
 private:
-	int data;
+
 public:
 
 	DoubleLinkedList();
