@@ -15,11 +15,15 @@ public:
 		Node *next;
 	}Node;
 
-	bool Queue<T>::isEmpty() {
+	bool isEmpty() {
 		return (count == 0);
 	}
 
-	void Queue<T>::addToQueue(T data) {
+	int GetCount(){
+		return count;
+	}
+
+	void addToQueue(T data) {
 		Node *newNode = new Node;
 		newNode->data = data;
 		newNode->next = NULL;
@@ -33,7 +37,7 @@ public:
 		count++;
 	}
 
-	void Queue<T>::deleteNodeFromQueue()
+	void deleteNodeFromQueue()
 	{
 		if (isEmpty())
 			cout << "Empty" << endl;
@@ -50,7 +54,7 @@ public:
 		}
 	}
 
-	T Queue<T>::GetData()
+	T GetData()
 	{
 		if (front != NULL) {
 			cout << front->data << endl;
@@ -59,7 +63,7 @@ public:
 		return 0;
 	}
 
-	Queue<T>::Queue()
+	Queue()
 	{
 		front = NULL;
 		rear = NULL;

@@ -17,4 +17,12 @@ TEST(QueueTest, WhenDeletingDataFromNodeItShouldRemoveCorrectly)
 	EXPECT_EQ(aNewQueue.GetData(), 10);
 }
 
-//ett size-test
+
+TEST(QueueTest, GetZeSize)
+{
+	Queue<int> aNewQueue;
+	aNewQueue.addToQueue(5);
+	aNewQueue.addToQueue(10);
+	
+	EXPECT_EQ(aNewQueue.GetCount(), 2);
+}
