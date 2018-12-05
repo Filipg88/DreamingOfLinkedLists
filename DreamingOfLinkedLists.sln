@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DreamingOfLinkedLists", "DreamingOfLinkedLists\DreamingOfLinkedLists.vcxproj", "{C4B905F5-8522-4B64-AE5E-5998885090A8}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DoubleLinkedList.Tests", "DoubleLinkedList.Tests\DoubleLinkedList.Tests.vcxproj", "{55AF8E3C-4473-45E1-9EDB-3262F71C30D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{C4B905F5-8522-4B64-AE5E-5998885090A8}.Release|x64.Build.0 = Release|x64
 		{C4B905F5-8522-4B64-AE5E-5998885090A8}.Release|x86.ActiveCfg = Release|Win32
 		{C4B905F5-8522-4B64-AE5E-5998885090A8}.Release|x86.Build.0 = Release|Win32
+		{55AF8E3C-4473-45E1-9EDB-3262F71C30D7}.Debug|x64.ActiveCfg = Debug|x64
+		{55AF8E3C-4473-45E1-9EDB-3262F71C30D7}.Debug|x64.Build.0 = Debug|x64
+		{55AF8E3C-4473-45E1-9EDB-3262F71C30D7}.Debug|x86.ActiveCfg = Debug|Win32
+		{55AF8E3C-4473-45E1-9EDB-3262F71C30D7}.Debug|x86.Build.0 = Debug|Win32
+		{55AF8E3C-4473-45E1-9EDB-3262F71C30D7}.Release|x64.ActiveCfg = Release|x64
+		{55AF8E3C-4473-45E1-9EDB-3262F71C30D7}.Release|x64.Build.0 = Release|x64
+		{55AF8E3C-4473-45E1-9EDB-3262F71C30D7}.Release|x86.ActiveCfg = Release|Win32
+		{55AF8E3C-4473-45E1-9EDB-3262F71C30D7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
