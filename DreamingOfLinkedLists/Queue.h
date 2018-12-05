@@ -2,21 +2,25 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
 
 //template <class T>
 class Queue
 {
 public:
-	struct Node
+	typedef struct Node
 	{
 		int data;
 		Node *next;
-	};
+	}Node;
+
 	Queue();
 	bool isEmpty();
-	void addToQueue(int data);
+	void addToQueue(int);
 	void removeFromQueue();
 	int GetData();
+	Node *GetNode(int);
+	void deleteNodeFromQueue();
 private:
 	Node *front;
 	Node *rear;

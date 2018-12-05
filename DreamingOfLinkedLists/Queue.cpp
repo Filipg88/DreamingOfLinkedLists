@@ -28,17 +28,29 @@ void Queue::addToQueue(int data) {
 	count++;
 }
 
-//template <class T>
-void Queue::removeFromQueue() {
+void Queue::deleteNodeFromQueue()
+{
+	if (isEmpty())
+		cout << "Empty" << endl;
+	else {
+		Node *temp = front;
+		if (front == rear){
+			front = NULL;
+			rear = NULL;
+		}
+		else 
+			front = front->next;
+		delete temp;
+		count--;
+	}
 }
-
 
 
 //template <class T>
 int Queue::GetData() 
 {
-	Queue *currentQue;
-	if (currentQue->front!= NULL) {
+	if (front!= NULL) {
+		cout << front->data << endl;
 		return this->front->data;
 	}
 	return 0;
