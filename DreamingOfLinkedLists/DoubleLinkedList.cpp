@@ -4,6 +4,8 @@
 
 DoubleLinkedList::DoubleLinkedList()
 {
+
+
 }
 
 
