@@ -8,9 +8,9 @@ using namespace std;
 int main()
 {
 	//Queue *newQue = new Queue;
-	Queue aQue;
-	aQue.addToQueue(5);
-	aQue.GetData();
+	//Queue aQue;
+	//aQue.addToQueue(5);
+	//aQue.GetData();
 
 
 

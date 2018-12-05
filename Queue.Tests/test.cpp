@@ -3,18 +3,18 @@
 
 TEST(QueueTest, WhenAddingDataToNodeItShouldStoreCorrectly) {
 	
-	Queue aNewQueue;
+	Queue<int> aNewQueue;
 	aNewQueue.addToQueue(5);
 	EXPECT_EQ(aNewQueue.GetData(), 5);
 }
 
 TEST(QueueTest, WhenDeletingDataFromNodeItShouldRemoveCorrectly)
 {
-	Queue aNewQueue;
+	Queue<int> aNewQueue;
 	aNewQueue.addToQueue(5);
 	aNewQueue.addToQueue(10);
-
 	aNewQueue.deleteNodeFromQueue();
-
 	EXPECT_EQ(aNewQueue.GetData(), 10);
 }
+
+//ett size-test
