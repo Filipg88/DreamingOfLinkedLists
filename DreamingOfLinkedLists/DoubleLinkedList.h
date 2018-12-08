@@ -38,7 +38,7 @@ public:
 	}
 
 	
-	~DoubleLinkedList();
+	//~DoubleLinkedList();
 private:
 	int count;
 	Node* head;
