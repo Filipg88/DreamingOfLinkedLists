@@ -3,7 +3,7 @@
 #include <string>
 #include "Queue.h"
 #include <algorithm>
-
+#include "linkedlist.h"
 using namespace std;
 
 int main()
@@ -13,17 +13,26 @@ int main()
 	//aQue.addToQueue(5);
 	//aQue.GetData();
 
-	vector <int> myvec;
+	//vector <int> myvec;
 
-	//Stack <int> myStack;
+	////Stack <int> myStack;
 
-	myvec.push_back(5);
-	myvec.push_back(2);
-	myvec.push_back(10);
+	//myvec.push_back(5);
+	//myvec.push_back(2);
+	//myvec.push_back(10);
 
-	myvec.erase(myvec.end()-1);
+	//myvec.erase(myvec.end()-1);
 
+	/*Linkedlist *newlist = new Linkedlist;
+	Linkedlist<int> aNewLinkedList;
+	aNewLinkedList.CreateNode(3);
+	aNewLinkedList.CreateNode(4);
+	aNewLinkedList.InsertByPosition(1, 4);
+	aNewLinkedList.InsertByPosition(0, 3);
+*/
+	/*aNewLinkedList.GetData(1);*/
 
+	/*EXPECT_EQ(4, aNewLinkedList.GetData(1));*/
 
 
 
