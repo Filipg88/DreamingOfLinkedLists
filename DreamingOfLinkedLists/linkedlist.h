@@ -17,6 +17,11 @@ public:
 		count = 0;
 	}
 
+	int GetSize()
+	{
+		return count;
+	}
+
 	void CreateNode(T data) {
 		Node *temp = new Node;
 		temp->data = data;
@@ -30,6 +35,7 @@ public:
 			tail->next = temp;
 			tail = temp;
 		}
+		count++;
 	}
 
 	void AddDataAtIndex(T data, int pos)
@@ -37,6 +43,7 @@ public:
 		
 		if (count == 0 || pos > count) {
 			CreateNode(data);
+			
 			return;
 		}
 
@@ -57,15 +64,16 @@ public:
 	}
 
 	void DeleteHead() {
-		Node *temp = new Node;
+		Node *temp;
 		temp = head;
 		head = head->next;
 		delete temp;
 	}
 
 	void DeleteByPosition(int pos) {
-		Node *current = new Node;
-		Node *prev = new Node;
+		Node *current;
+		Node *prev;
+		count--;
 
 		if (pos == 0) {
 			DeleteHead();
@@ -79,11 +87,12 @@ public:
 			current = current->next;
 		}
 		prev->next = current->next;
-		count--;
+		delete current;
+		
 	}
 
 	T GetData(int index) {
-		Node *current = new Node;
+		Node *current;
 		current = head;
 		for (int i = 0; i < index; i++)
 		{
