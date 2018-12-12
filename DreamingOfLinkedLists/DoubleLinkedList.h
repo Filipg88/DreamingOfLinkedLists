@@ -1,25 +1,24 @@
-//#pragma once
-//#include <iostream>
-//#include <vector>
-//
-//template <class T>
-//class DoubleLinkedList
-//{
-//
-//public:
-//	typedef struct Node
-//	{
-//		T data;
-//		Node* next;
-//		Node* prev;
-//	}Node;
-//
-//	DoubleLinkedList()
-//	{
-//		this->size = 0;
-//		this->head = NULL;
-//		this->tail = NULL;
-//	}
+#pragma once
+#include <iostream>
+#include <vector>
+
+template <class T>
+class DoubleLinkedList
+{
+public:
+	typedef struct Node
+	{
+		T data;
+		Node* next;
+		Node* prev;
+	}Node;
+
+	DoubleLinkedList()
+	{
+		this->size = 0;
+		this->head = NULL;
+		this->tail = NULL;
+	}
 //
 //	int GetSize() {
 //		return size;
@@ -49,9 +48,9 @@
 //	~DoubleLinkedList() {
 //		clear();
 //	}
-//private:
-//	int size;
-//	Node* head;
-//	Node* tail;
-//};
-//
+private:
+	int size;
+	Node* head;
+	Node* tail;
+};
+
