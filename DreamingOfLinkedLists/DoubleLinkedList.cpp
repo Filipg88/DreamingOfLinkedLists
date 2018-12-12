@@ -2,13 +2,13 @@
 
 
 
-//DoubleLinkedList::DoubleLinkedList()
-//{
-//
-//
-//}
-//
-//
-//DoubleLinkedList::~DoubleLinkedList()
-//{
-//}
+DoubleLinkedList::DoubleLinkedList()
+{
+
+
+}
+
+
+DoubleLinkedList::~DoubleLinkedList()
+{
+}
