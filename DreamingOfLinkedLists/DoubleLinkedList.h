@@ -59,9 +59,8 @@ public:
 		
 		for (int i = 0; i < pos - 1; i++) {
 			current = current->next;
-			if (current == NULL)
-				return;
 		}
+
 		if (current->next == NULL)
 		{
 			current->next = newNode;
@@ -75,8 +74,6 @@ public:
 			current->next = newNode;
 			newNode->prev = current;
 		}
-
-
 		count++;
 	}
 
@@ -90,8 +87,8 @@ public:
 
 	void DeleteByPosition(int pos) {
 
-		if (pos > count) { // inte testad
-			std::cout << "element not found" << std::endl;
+		if (pos > count) {
+			std::cout << "Element not found" << std::endl;
 			return;
 		}
 
@@ -115,16 +112,10 @@ public:
 				if(temp->next != NULL)
 					temp->next->prev = current;
 				delete temp;
-
 				return;
 			}
-			
 			current = current->next;
 		}
-		/*temp = current->next;
-		delete temp;
-		current->next = NULL;*/
-		/*temp->next = current->next;*/
 	}
 
 	T GetData(int index) {

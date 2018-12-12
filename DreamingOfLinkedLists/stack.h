@@ -10,7 +10,6 @@ class Stack {
 public:
 	Stack()
 	{
-
 	}
 
 	void AddToStack(T stuff){
@@ -18,7 +17,6 @@ public:
 	}
 
 	void RemoveFromStack ()	{
-		/*ourStack.erase(ourStack.end() - 1);*/
 		ourStack.pop_back();
 	}
 

@@ -77,19 +77,3 @@ TEST(DoubleLinkedListTest, ReturnCorrectSizeOfListAfterUsingAddAndDeleteFunction
 
 	EXPECT_EQ(2, aNewLinkedList.GetSize());
 }
-
-
-
-
-//TEST(DoubleLinkedListTest, DelEnd) { //TYCKER EJ VI BEHÖVER DENNA //FILIP
-//	DoubleLinkedList<int> aNewLinkedList;
-//	aNewLinkedList.AddDataAtIndex(2, 0);
-//	aNewLinkedList.AddDataAtIndex(6, 1);
-//	aNewLinkedList.AddDataAtIndex(8, 2);
-//
-//	aNewLinkedList.DeleteByPosition(2);
-//
-//	aNewLinkedList.CreateNode(14);
-//
-//	EXPECT_EQ(14, aNewLinkedList.GetData(2));
-//}
