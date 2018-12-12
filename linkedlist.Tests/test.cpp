@@ -1,13 +1,24 @@
 #include "pch.h"
 #include "../DreamingOfLinkedLists/linkedlist.h"
 
-TEST(LinkedListTest, WhenAddingDataNodeShouldCreateLast) {
+TEST(LinkedListTest, WhenAddingIntNodeShouldAppendLast) {
 	Linkedlist<int> aNewLinkedList;
 	aNewLinkedList.CreateNode(2);
 	aNewLinkedList.CreateNode(6);
 	aNewLinkedList.CreateNode(5);
 
+
 	EXPECT_EQ(5, aNewLinkedList.GetData(2));
+}
+
+TEST(LinkedListTest, WhenAddingStringNodeShouldAppendLast) {
+	Linkedlist<std::string> aNewLinkedList;
+	aNewLinkedList.CreateNode("hej");
+	aNewLinkedList.CreateNode("po");
+	aNewLinkedList.CreateNode("dig");
+
+
+	EXPECT_EQ("dig", aNewLinkedList.GetData(2));
 }
 
 TEST(LinkedListTest, InsertNodeAtIndexAfterCreatingList) {
@@ -69,8 +80,17 @@ TEST(LinkedListTest, GetSizeOfLinkedList) {
 	aNewLinkedList.AddDataAtIndex(6, 1);
 	aNewLinkedList.AddDataAtIndex(8, 2);
 
-
-	
-
 	EXPECT_EQ(3, aNewLinkedList.GetSize());
 }
+
+TEST(LinkedListTest, GetSizeOfLinkedListWhenNodeIsDeleted) {
+	Linkedlist<int> aNewLinkedList;
+	aNewLinkedList.AddDataAtIndex(2, 0);
+	aNewLinkedList.AddDataAtIndex(6, 1);
+	aNewLinkedList.AddDataAtIndex(8, 2);
+
+	aNewLinkedList.DeleteByPosition(2);
+
+	EXPECT_EQ(2, aNewLinkedList.GetSize());
+}
+

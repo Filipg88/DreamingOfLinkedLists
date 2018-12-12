@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "../DreamingOfLinkedLists/DoubleLinkedList.h"
 
-TEST(doublyLinkedList, appendNode) {
+TEST(DoubleLinkedListTest, WhenAddingIntNodeShouldAppendLast) {
 
 	DoubleLinkedList <int> list;
 	list.CreateNode(2);
@@ -11,7 +11,17 @@ TEST(doublyLinkedList, appendNode) {
 	EXPECT_EQ(8, list.GetData(2));
 }
 
-TEST(doublyLinkedList, CantSetIndexThatDosentExist) {
+TEST(DoubleLinkedListTest, WhenAddingStringNodeShouldAppendLast) {
+	DoubleLinkedList<std::string> aNewLinkedList;
+	aNewLinkedList.CreateNode("hej");
+	aNewLinkedList.CreateNode("po");
+	aNewLinkedList.CreateNode("dig");
+
+
+	EXPECT_EQ("dig", aNewLinkedList.GetData(2));
+}
+
+TEST(DoubleLinkedListTest, CantSetIndexThatDosentExist) {
 
 	DoubleLinkedList <int> list;
 
@@ -21,7 +31,7 @@ TEST(doublyLinkedList, CantSetIndexThatDosentExist) {
 	EXPECT_EQ(7, list.GetData(1));
 }
 
-TEST(doublyLinkedList, SetNodeAtIndex) {
+TEST(DoubleLinkedListTest, SetNodeAtIndex) {
 
 	DoubleLinkedList <int> list;
 
@@ -35,7 +45,7 @@ TEST(doublyLinkedList, SetNodeAtIndex) {
 	EXPECT_EQ(15, list.GetData(1));
 }
 
-TEST(doublyLinkedList, DelHead) {
+TEST(DoubleLinkedListTest, DelHead) {
 	DoubleLinkedList<int> aNewLinkedList;
 	aNewLinkedList.AddDataAtIndex(2, 0);
 	aNewLinkedList.AddDataAtIndex(6, 1);
@@ -47,7 +57,7 @@ TEST(doublyLinkedList, DelHead) {
 	EXPECT_EQ(6, aNewLinkedList.GetData(0));
 }
 
-TEST(doublyLinkedList, DelMiddle) {
+TEST(DoubleLinkedListTest, DelMiddle) {
 	DoubleLinkedList<int> aNewLinkedList;
 	aNewLinkedList.AddDataAtIndex(2, 0);
 	aNewLinkedList.AddDataAtIndex(6, 1);
@@ -59,28 +69,37 @@ TEST(doublyLinkedList, DelMiddle) {
 	EXPECT_EQ(8, aNewLinkedList.GetData(1));
 }
 
-TEST(doublyLinkedList, DelEnd) {
+TEST(DoubleLinkedListTest, DelEnd) {
 	DoubleLinkedList<int> aNewLinkedList;
 	aNewLinkedList.AddDataAtIndex(2, 0);
 	aNewLinkedList.AddDataAtIndex(6, 1);
 	aNewLinkedList.AddDataAtIndex(8, 2);
 
-
 	aNewLinkedList.DeleteByPosition(2);
 
 	aNewLinkedList.CreateNode(14);
 
-
 	EXPECT_EQ(14, aNewLinkedList.GetData(2));
 }
 
-TEST(doublyLinkedList, GetSizeOfDoubleLinkedList) {
+TEST(DoubleLinkedListTest, GetSizeOfDoubleLinkedList) {
 	DoubleLinkedList<int> aNewLinkedList;
 	aNewLinkedList.AddDataAtIndex(2, 0);
 	aNewLinkedList.AddDataAtIndex(6, 1);
 	aNewLinkedList.AddDataAtIndex(8, 2);
 
 	EXPECT_EQ(3, aNewLinkedList.GetSize());
+}
+
+TEST(DoubleLinkedListTest, GetSizeOfDoubleLinkedListWhenNodeIsDeleted) {
+	DoubleLinkedList<int> aNewLinkedList;
+	aNewLinkedList.AddDataAtIndex(2, 0);
+	aNewLinkedList.AddDataAtIndex(6, 1);
+	aNewLinkedList.AddDataAtIndex(8, 2);
+
+	aNewLinkedList.DeleteByPosition(2);
+
+	EXPECT_EQ(2, aNewLinkedList.GetSize());
 }
 
 
