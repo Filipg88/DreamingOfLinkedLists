@@ -2,15 +2,17 @@
 #include "../DreamingOfLinkedLists/stack.h"
 
 
-TEST(StackTests, WhenAddingElement) {
+TEST(StackTests, AddingElementsShouldStoreCorrectly) {
 	
 	Stack<int> myStack;
 	myStack.AddToStack(5);
+	myStack.AddToStack(10);
+
 	
-	EXPECT_EQ(5, myStack.GetFromTop());
+	EXPECT_EQ(10, myStack.GetFromTop());
 }
 
-TEST(StackTests, WhenRemovingShouldLIFO) {
+TEST(StackTests, WhenRemovingElementsShouldLIFO) {
 
 	Stack<int> myStack;
 	myStack.AddToStack(5);
@@ -21,13 +23,12 @@ TEST(StackTests, WhenRemovingShouldLIFO) {
 	EXPECT_EQ(5, myStack.GetFromTop());
 }
 
-TEST(StackTests, WhenGettingSizeShouldReturnTheRightSize) {
+TEST(StackTests, ReturnCorrectSizeAfterUsingAddAndDeleteFunctions) {
 
 	Stack<int> myStack;
 	myStack.AddToStack(5);
 	myStack.AddToStack(10);
+	myStack.RemoveFromStack();
 
-	EXPECT_EQ(2, myStack.GetSize());
+	EXPECT_EQ(1, myStack.GetSize());
 }
-
-//size 

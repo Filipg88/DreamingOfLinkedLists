@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "../DreamingOfLinkedLists/linkedlist.h"
 
-TEST(LinkedListTest, WhenAddingIntNodeShouldAppendLast) {
+TEST(LinkedListTest, AddingIntNodeShouldAppendLastIfNothingElseSpecified) {
 	Linkedlist<int> aNewLinkedList;
 	aNewLinkedList.CreateNode(2);
 	aNewLinkedList.CreateNode(6);
@@ -11,37 +11,26 @@ TEST(LinkedListTest, WhenAddingIntNodeShouldAppendLast) {
 	EXPECT_EQ(5, aNewLinkedList.GetData(2));
 }
 
-TEST(LinkedListTest, WhenAddingStringNodeShouldAppendLast) {
+TEST(LinkedListTest, AddingStringNodeShouldAppendLastIfNothingElseSpecified) {
 	Linkedlist<std::string> aNewLinkedList;
-	aNewLinkedList.CreateNode("hej");
-	aNewLinkedList.CreateNode("po");
-	aNewLinkedList.CreateNode("dig");
+	aNewLinkedList.CreateNode("Singly");
+	aNewLinkedList.CreateNode("Linked");
+	aNewLinkedList.CreateNode("List");
 
 
-	EXPECT_EQ("dig", aNewLinkedList.GetData(2));
+	EXPECT_EQ("List", aNewLinkedList.GetData(2));
 }
 
-TEST(LinkedListTest, InsertNodeAtIndexAfterCreatingList) {
-	Linkedlist<int> aNewLinkedList;
-	aNewLinkedList.CreateNode(2);
-	aNewLinkedList.CreateNode(6);
-	aNewLinkedList.CreateNode(5);
-
-	aNewLinkedList.AddDataAtIndex(15, 1);
-
-	EXPECT_EQ(15, aNewLinkedList.GetData(1));
-}
-
-TEST(LinkedListTest, WhenAddingANodeAtSpecificIndex) {
+TEST(LinkedListTest, AddingANodeAtSpecificIndexAndBetweenTwoListItems) {
 	Linkedlist<int> aNewLinkedList;
 	aNewLinkedList.AddDataAtIndex(2, 0);
-	aNewLinkedList.AddDataAtIndex(6, 2);
+	aNewLinkedList.AddDataAtIndex(6, 1);
 	aNewLinkedList.AddDataAtIndex(5, 1);
 
 	EXPECT_EQ(5, aNewLinkedList.GetData(1));
 }
 
-TEST(LinkedListTest, WhenAddingANodeGreaterAtIndexGreaterThanSizeShouldAddNodeLast) {
+TEST(LinkedListTest, CantSetIndexThatDosentExistShouldInsteadAppendLast) {
 	Linkedlist<int> aNewLinkedList;
 	aNewLinkedList.AddDataAtIndex(2, 0);
 	aNewLinkedList.AddDataAtIndex(6, 2);
@@ -50,7 +39,7 @@ TEST(LinkedListTest, WhenAddingANodeGreaterAtIndexGreaterThanSizeShouldAddNodeLa
 	EXPECT_EQ(10, aNewLinkedList.GetData(2));
 }
 
-TEST(LinkedListTest, Del) {
+TEST(LinkedListTest, DeletingByIndexPosition) {
 	Linkedlist<int> aNewLinkedList;
 	aNewLinkedList.AddDataAtIndex(2, 0);
 	aNewLinkedList.AddDataAtIndex(6, 1);
@@ -62,35 +51,25 @@ TEST(LinkedListTest, Del) {
 	EXPECT_EQ(6, aNewLinkedList.GetData(0));
 }
 
-TEST(LinkedListTest, DelMiddle) {
+TEST(LinkedListTest, WhenDeletingByIndexInbetweenDataTheDataBehindTakesItsIndexPosition) {
 	Linkedlist<int> aNewLinkedList;
 	aNewLinkedList.AddDataAtIndex(2, 0);
 	aNewLinkedList.AddDataAtIndex(6, 1);
 	aNewLinkedList.AddDataAtIndex(8, 2);
 
-	
 	aNewLinkedList.DeleteByPosition(1);
 
 	EXPECT_EQ(8, aNewLinkedList.GetData(1));
 }
 
-TEST(LinkedListTest, GetSizeOfLinkedList) {
+TEST(LinkedListTest, ReturnCorrectSizeOfListAfterUsingAddAndDeleteFunctions) {
 	Linkedlist<int> aNewLinkedList;
-	aNewLinkedList.AddDataAtIndex(2, 0);
+	aNewLinkedList.CreateNode(2);
 	aNewLinkedList.AddDataAtIndex(6, 1);
 	aNewLinkedList.AddDataAtIndex(8, 2);
-
-	EXPECT_EQ(3, aNewLinkedList.GetSize());
-}
-
-TEST(LinkedListTest, GetSizeOfLinkedListWhenNodeIsDeleted) {
-	Linkedlist<int> aNewLinkedList;
-	aNewLinkedList.AddDataAtIndex(2, 0);
-	aNewLinkedList.AddDataAtIndex(6, 1);
-	aNewLinkedList.AddDataAtIndex(8, 2);
-
 	aNewLinkedList.DeleteByPosition(2);
 
 	EXPECT_EQ(2, aNewLinkedList.GetSize());
 }
+
 

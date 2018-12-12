@@ -73,9 +73,10 @@ public:
 	void DeleteByPosition(int pos) {
 		Node *current;
 		Node *prev;
-		if (pos > count)	// inte testad
+		if (pos > count) { // inte testad
 			std::cout << "element not found" << std::endl;
 			return;
+		}
 		count--;
 
 		if (pos == 0) {

@@ -1,28 +1,28 @@
 #include "pch.h"
 #include "../DreamingOfLinkedLists/Queue.h"
 
-TEST(QueueTest, WhenAddingDataToNodeItShouldStoreCorrectly) {
+TEST(QueueTest, AddingElementShouldStoreCorrectly) {
 	
 	Queue<int> aNewQueue;
 	aNewQueue.addToQueue(5);
-	EXPECT_EQ(aNewQueue.GetData(), 5);
+	EXPECT_EQ(5, aNewQueue.GetData());
 }
 
-TEST(QueueTest, WhenDeletingDataFromNodeItShouldRemoveCorrectly)
+TEST(QueueTest, WhenRemovingElementsShouldFIFO)
 {
 	Queue<int> aNewQueue;
 	aNewQueue.addToQueue(5);
 	aNewQueue.addToQueue(10);
 	aNewQueue.deleteNodeFromQueue();
-	EXPECT_EQ(aNewQueue.GetData(), 10);
+	EXPECT_EQ(10, aNewQueue.GetData());
 }
 
-
-TEST(QueueTest, GetZeSize)
+TEST(QueueTest, ReturnCorrectSizeAfterUsingAddAndDeleteFunctions)
 {
 	Queue<int> aNewQueue;
 	aNewQueue.addToQueue(5);
 	aNewQueue.addToQueue(10);
+	aNewQueue.deleteNodeFromQueue();
 	
-	EXPECT_EQ(aNewQueue.GetCount(), 2);
+	EXPECT_EQ(1, aNewQueue.GetCount());
 }
