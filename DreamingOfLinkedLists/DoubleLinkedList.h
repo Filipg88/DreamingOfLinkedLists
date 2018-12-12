@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-
+// hello
 template <class T>
 class DoubleLinkedList
 {
@@ -24,21 +24,75 @@ public:
 		return count;
 	}
 
-	void AddToList(T data) 
+	void set_tail(T data)
 	{
-		Node *newNode = new Node;
-		newNode->data = data;
-		newNode->next = NULL;
-		newNode->prev = NULL;
-		if (GetCount() == 0)
+		Node *new_node = new Node();
+		tail = new_node;
+		tail->next = NULL;
+		tail->data = data;
+		head->next = tail;
+		tail->prev = head;
+	}
+
+	void set_head(T data)
+	{
+		Node *new_node = new Node();
+		head = new_node;
+		head->next = NULL;
+		head->prev = NULL;
+		head->data = data;
+	}
+
+	void append_list(T data)
+	{
+		Node *prev_tail = tail;
+		Node *new_tail = new Node();
+		new_tail->data = data;
+
+		new_tail->prev = prev_tail;
+		prev_tail->next = new_tail;
+		tail = new_tail;
+	}
+
+	void addToList(T data)
+	{
+		if (head == NULL)
 		{
-			head = newNode;
-			tail = newNode;
+			set_head(data);
+			count++;
+			return;
 		}
+		
+		else
+		{
+			if (tail == NULL)
+			{
+				set_tail(data);
+				count++;
+				return;
+			}
+			else
+			{
+				append_list(data);
+				count++;
+				return;
+			}
+		}
+		
+	}
+
+	T GetData(int index) {
+		Node *current = head;
+		//current = head;
+		for (int i = 0; i < index; i++)
+		{
+			current = current->next;
+		}
+		return current->data;
 	}
 
 	
-	~DoubleLinkedList();
+	//~DoubleLinkedList();
 private:
 	int count;
 	Node* head;

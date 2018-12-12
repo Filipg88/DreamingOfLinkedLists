@@ -34,13 +34,14 @@ public:
 
 	void AddDataAtIndex(T data, int pos)
 	{
-		Node *newNode = new Node;
-		Node *current = head;
-
+		
 		if (count == 0 || pos > count) {
 			CreateNode(data);
 			return;
 		}
+
+		Node *newNode = new Node;
+		Node *current = head;
 
 		newNode->data = data;
 		for (int i = 0; i < pos; i++) {
