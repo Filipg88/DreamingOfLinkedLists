@@ -23,7 +23,7 @@ public:
 		return count;
 	}
 
-	void CreateNode(T data) {
+	void SetHeadAndAppendLast(T data) {
 		Node *temp = new Node;
 		Node *start;
 		temp->data = data;
@@ -49,7 +49,7 @@ public:
 	{
 
 		if (count == 0 || pos > count) {
-			CreateNode(data);
+			SetHeadAndAppendLast(data);
 			return;
 		}
 

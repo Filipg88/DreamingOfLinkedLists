@@ -4,18 +4,18 @@
 TEST(DoubleLinkedListTest, AddingIntNodeShouldAppendLastIfNothingElseSpecified) {
 
 	DoubleLinkedList <int> list;
-	list.CreateNode(2);
-	list.CreateNode(5);
-	list.CreateNode(8);
+	list.SetHeadAndAppendLast(2);
+	list.SetHeadAndAppendLast(5);
+	list.SetHeadAndAppendLast(8);
 
 	EXPECT_EQ(8, list.GetData(2));
 }
 
 TEST(DoubleLinkedListTest, AddingStringNodeShouldAppendLastIfNothingElseSpecified) {
 	DoubleLinkedList<std::string> aNewLinkedList;
-	aNewLinkedList.CreateNode("Double");
-	aNewLinkedList.CreateNode("Linked");
-	aNewLinkedList.CreateNode("List");
+	aNewLinkedList.SetHeadAndAppendLast("Double");
+	aNewLinkedList.SetHeadAndAppendLast("Linked");
+	aNewLinkedList.SetHeadAndAppendLast("List");
 
 
 	EXPECT_EQ("List", aNewLinkedList.GetData(2));
@@ -35,9 +35,9 @@ TEST(DoubleLinkedListTest, AddingANodeAtSpecificIndexAndBetweenTwoListItems) {
 
 	DoubleLinkedList <int> list;
 
-	list.CreateNode(6);
-	list.CreateNode(7);
-	list.CreateNode(10);
+	list.SetHeadAndAppendLast(6);
+	list.SetHeadAndAppendLast(7);
+	list.SetHeadAndAppendLast(10);
 
 	list.AddDataAtIndex(15, 1);
 
